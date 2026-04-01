@@ -81,7 +81,7 @@ export default function App() {
 
       <div style={{ margin: '10px' }}>
         <label>
-          First Name:
+          First name:
           <input
             style={{ margin: '10px' }}
             value={firstName}
@@ -92,7 +92,7 @@ export default function App() {
 
       <div style={{ margin: '10px' }}>
         <label style={{ margin: '10px' }}>
-          Last Name:
+          Last name:
           <input
             style={{ margin: '10px' }}
             value={lastName}
