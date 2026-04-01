@@ -22,7 +22,8 @@ export default function App() {
     });
   }, []);
 
-  const handleAddGuest = async () => {
+  const handleAddGuest = async (event) => {
+    event.preventDefault();
     if (firstName.trim() === '' || lastName.trim() === '') return;
 
     const response = await fetch(`${baseUrl}/guests`, {
