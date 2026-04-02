@@ -104,7 +104,7 @@ export default function App() {
             />
           </label>
         </div>
-        <button type="submit" style={{ display: 'none' }} aria-hidden="true">
+        <button style={{ display: 'none' }} aria-hidden="true">
           Submit
         </button>
       </form>
