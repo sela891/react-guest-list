@@ -80,38 +80,34 @@ export default function App() {
     >
       <h1>Guest List</h1>
 
-      <div style={{ margin: '10px' }}>
-        <label>
-          First name:
-          <input
-            style={{ margin: '10px' }}
-            value={firstName}
-            onChange={(event) => setFirstName(event.currentTarget.value)}
-          />
-        </label>
-      </div>
+      <form onSubmit={handleAddGuest}>
+        <div style={{ margin: '10px' }}>
+          <label>
+            First name:
+            <input
+              style={{ margin: '10px' }}
+              value={firstName}
+              disabled={isLoading}
+              onChange={(event) => setFirstName(event.currentTarget.value)}
+            />
+          </label>
+        </div>
 
-      <div style={{ margin: '10px' }}>
-        <label style={{ margin: '10px' }}>
-          Last name:
-          <input
-            style={{ margin: '10px' }}
-            value={lastName}
-            onChange={(event) => setLastName(event.currentTarget.value)}
-          />
-        </label>
-      </div>
-
-      <div style={{ margin: '10px' }}>
-        <button
-          style={{ width: '200px' }}
-          type="button"
-          onClick={handleAddGuest}
-        >
-          Return
+        <div style={{ margin: '10px' }}>
+          <label style={{ margin: '10px' }}>
+            Last name:
+            <input
+              style={{ margin: '10px' }}
+              value={lastName}
+              disabled={isLoading}
+              onChange={(event) => setLastName(event.currentTarget.value)}
+            />
+          </label>
+        </div>
+        <button type="submit" style={{ display: 'none' }} aria-hidden="true">
+          Submit
         </button>
-      </div>
-
+      </form>
       <div>
         <p>
           <strong>Guests</strong>
